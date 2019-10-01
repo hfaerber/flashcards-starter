@@ -40,10 +40,10 @@ describe('Turn', function() {
     const turn = new Turn('giant turkey sub', card);
     const turn1 = new Turn('noodle', card);
 
-    turn.returnGuess();
+    // turn.returnGuess();
     expect(turn.returnGuess()).to.equal('giant turkey sub');
 
-    turn1.returnGuess();
+    // turn1.returnGuess();
     expect(turn1.returnGuess()).to.equal('noodle');
   })
 
@@ -51,7 +51,7 @@ describe('Turn', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('giant turkey sub', card);
 
-    turn.returnCard();
+    // turn.returnCard();
     expect(turn.returnCard()).to.equal(card);
     expect(turn.returnCard()).to.deep.equal(card);
   })
@@ -61,10 +61,10 @@ describe('Turn', function() {
     const turn = new Turn('giant turkey sub', card);
     const turn1 = new Turn('object', card);
 
-    turn.evaluateGuess();
+    // turn.evaluateGuess();
     expect(turn.evaluateGuess()).to.equal(false);
 
-    turn1.evaluateGuess();
+    // turn1.evaluateGuess();
     expect(turn1.evaluateGuess()).to.equal(true);
   })
 
@@ -72,10 +72,10 @@ describe('Turn', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('giant turkey sub', card);
     const turn1 = new Turn('object', card);
-    turn.giveFeedback();
+    // turn.giveFeedback();
     expect(turn.giveFeedback()).to.equal('incorrect!');
 
-    turn1.giveFeedback();
+    // turn1.giveFeedback();
     expect(turn1.giveFeedback()).to.equal('correct!');
   })
 
