@@ -14,8 +14,12 @@ class Round {
   }
 
   takeTurn(guess) {
+    console.log('cardbeforeTurn', this.currentCard);
     const turn = new Turn(guess, this.currentCard);
     this.turns += 1;
+    console.log('turnsAfterTurn', this.turns);
+    this.currentCard = this.deck[+1];
+    console.log('cardafterTurn', this.currentCard);
     return turn;
 // will return giveFeedback
   }
