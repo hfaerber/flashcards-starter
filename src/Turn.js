@@ -9,13 +9,13 @@ class Turn {
   }
 
   returnCard() {
-    console.log(this.card);
+    // console.log(this.card);
     return this.card;
   }
 
   evaluateGuess() {
       return (this.guess === this.card.correctAnswer)? true : false;
-    // 
+    //
     // if (this.guess === this.card.correctAnswer) {
     //   return true;
     // } else {
