@@ -3,7 +3,6 @@ const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
 const Card = require('../src/Card');
-const Turn = require('../src/Turn');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 
@@ -23,7 +22,7 @@ class Game {
 
   start() {
     let pileOfCards = [];
-    prototypeQuestions.forEach(function(questionInfo){
+    prototypeQuestions.forEach(function(questionInfo) {
       const card = new Card(questionInfo.id, questionInfo.question,
         questionInfo.answers, questionInfo.correctAnswer);
       pileOfCards.push(card);
