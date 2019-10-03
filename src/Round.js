@@ -29,12 +29,12 @@ class Round {
   calculatePercentCorrect() {
     var percentCorrect = (this.turns - this.incorrectGuesses.length) / this.turns * 100;
     var roundedPercentCorrect = Math.round(percentCorrect);
-    console.log('rounded', roundedPercentCorrect);
+    // console.log('rounded', roundedPercentCorrect);
     return roundedPercentCorrect;
   }
 
   endRound() {
-    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
   }
 
