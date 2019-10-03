@@ -14,30 +14,26 @@ class Round {
   }
 
   takeTurn(guess) {
-    // console.log('cardbeforeTurn', this.currentCard);
     const turn = new Turn(guess, this.currentCard);
     this.turns += 1;
     if (turn.evaluateGuess() === false) {
       this.incorrectGuesses.push(this.currentCard.id)
     }
-    // console.log('turnsAfterTurn', this.turns);
     this.currentCard = this.deck[this.turns];
-    // console.log('cardafterTurn', this.currentCard);
     return turn.giveFeedback();
   }
 
   calculatePercentCorrect() {
-    var percentCorrect = (this.turns - this.incorrectGuesses.length) / this.turns * 100;
+    var percentCorrect =
+      (this.turns - this.incorrectGuesses.length) / this.turns * 100;
     var roundedPercentCorrect = Math.round(percentCorrect);
-    // console.log('rounded', roundedPercentCorrect);
     return roundedPercentCorrect;
   }
 
   endRound() {
     console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
-    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    return ;
   }
-
 }
 
 module.exports = Round;

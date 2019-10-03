@@ -12,7 +12,6 @@ class Game {
     this.currentRound;
   }
 
-
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
@@ -25,19 +24,16 @@ class Game {
   start() {
     let pileOfCards = [];
     prototypeQuestions.forEach(function(questionInfo){
-      const card = new Card(questionInfo.id, questionInfo.question, questionInfo.answers, questionInfo.correctAnswer);
+      const card = new Card(questionInfo.id, questionInfo.question,
+        questionInfo.answers, questionInfo.correctAnswer);
       pileOfCards.push(card);
     });
     const deck = new Deck(pileOfCards);
     const round = new Round(deck);
-    // console.log('ROUNDROUNDROUND', round);
     this.currentRound = round;
-    // console.log('CURRENTROUND', this.currentRound);
     this.printMessage(deck, round);
     this.printQuestion(round);
-
   }
-
 }
 
 module.exports = Game;
