@@ -10,9 +10,14 @@ describe('Game', function() {
   //   game.start();
   //   expect(game.start()).to.be.a('function');  ERRORS
   // })
-  it('should make a deck with 30 cards', function() {
+  it('should keep track of currentRound', function() {
     const game = new Game();
+
+    // expect(this.currentRound).to.equal(undefined);
+
     game.start();
+
+    // expect(this.currentRound).to.equal();
 
     // expect(deck.cards.length).to.equal(30);
   })
