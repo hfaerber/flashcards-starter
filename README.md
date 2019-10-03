@@ -21,4 +21,4 @@ answered correctly.
 To exit game play after or during the game, use `control + C`.  Have fun!
 
 ## See It In Action
-![Gif of game being played]('./gameGif.gif')
+![Gif of game being played](https://user-images.githubusercontent.com/48163945/66167200-ff6e2680-e628-11e9-9cc1-151bed744f78.gif)
