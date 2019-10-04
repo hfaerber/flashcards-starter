@@ -87,7 +87,7 @@ describe('Round', function() {
     expect(round.takeTurn).to.be.a('function');
   })
 
-// skipping test below bc no longer returning 'turn' in method I'm testing
+  // skipping test below bc no longer returning 'turn' in method I'm testing
   it.skip('should instantiate new Turn when takeTurn() invoked', function() {
     const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
@@ -96,33 +96,33 @@ describe('Round', function() {
     const round = new Round(deck);
     expect(typeof round.takeTurn('beef')).to.equal('object');
     expect(round.takeTurn('beef')).to.be.an.instanceof(Turn);
-   })
+  })
 
-   // skipping test below bc no longer returning 'turn' in method I'm testing
-   it.skip('should use guess as first arg of new Turn inst', function() {
-     const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-     const card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
-     const card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
-     const deck = new Deck([card1, card2, card3]);
-     const round = new Round(deck);
-     round.takeTurn('beef');
-     expect(round.takeTurn('beef').guess).to.equal('beef');
-   })
+  // skipping test below bc no longer returning 'turn' in method I'm testing
+  it.skip('should use guess as first arg of new Turn inst', function() {
+    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
+    const card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+    round.takeTurn('beef');
+    expect(round.takeTurn('beef').guess).to.equal('beef');
+  })
 
-   // skipping test below bc no longer returning 'turn' in method I'm testing
-   it.skip('should use turn.currentCard as 2nd arg of Turn inst', function() {
-     const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-     const card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
-     const card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
-     const deck = new Deck([card1, card2, card3]);
-     const round = new Round(deck);
-     expect(round.takeTurn('beef').card).to.deep.equal({
-        id: 1,
-        question:
-         'What allows you to define a set of related information using key-value pairs?',
-        answers: [ 'object', 'array', 'function' ],
-        correctAnswer: 'object' });
-   })
+  // skipping test below bc no longer returning 'turn' in method I'm testing
+  it.skip('should use turn.currentCard as 2nd arg of Turn inst', function() {
+    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
+    const card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+    expect(round.takeTurn('beef').card).to.deep.equal({
+      id: 1,
+      question:
+      'What allows you to define a set of related information using key-value pairs?',
+      answers: [ 'object', 'array', 'function' ],
+      correctAnswer: 'object' });
+  })
 
   it('should update turns counter when takeTurn method invoked', function() {
     const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
